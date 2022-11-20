@@ -1,0 +1,75 @@
+.bug-stat {
+    padding: 0 40px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    color: var(--dark-bg-color);
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+}
+
+.open { background-color: #a8d6a8; }  
+.closed-bugs { background-color: var(--prime-color); }
+.overdue-bugs { background-color: #be7575; }  
+.due-soon-bugs { background-color: #d1ba73; }
+.due-later-bugs { background-color: #d9e08d; }  
+
+.bug-stat p {
+    margin: 10px 0;
+}
+
+.bug-stat-amount {
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.bug-stat.active, .bug-stat:hover{
+    background-color: var(--dark-bg-color) ;
+    color:#fff;
+    box-shadow: 0 0 5px white;
+}
+
+.bug:not(#bugs-wrapper :nth-child(1)){
+    background-color: black;
+}
+
+.bug:not(#bugs-wrapper :nth-child(1)):hover{
+    background-color: rgb(46, 46, 46);
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 0 var(--prime-color);
+}
+
+.bug {
+    border-radius: 0;
+}
+
+.bug-id       { width: 5%;  }
+.bug-details  { width: 28%; }
+.bug-date     { width: 12%; }
+.bug-urgency  { width: 8%; }
+.bug-reporter { width: 10%; }
+.bug-project  { width: 12%; }
+.bug-category { width: 17%; }
+.bug-status   { width: 8%;  }
+
+.bug-reporter img, .bug-worker img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.fixed {
+    background-color: #284b30;
+    color: #5cac6f;
+    padding: 10px 0;
+    
+}
+
+.closed {
+    background-color: #707542;
+    color: #c6cf74;
+}

@@ -1,0 +1,145 @@
+.main-stats {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat {
+    flex-grow:1;
+    background-color: var(--dark-bg-color);
+    padding: 10px 30px;
+    
+}
+
+.active {
+    background-color: var(--prime-color);
+    pointer-events: none;
+    color: var(--dark-bg-color);
+}
+
+.stat:hover {
+    cursor: pointer;
+}
+
+.stat-inner {
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.stat-title {
+    font-size: 16px;
+    display: flex;
+    color: var(--light-comp-color);
+}
+
+.stat-amount {
+    font-size: 22px;
+    font-weight: bold;
+    bottom: 25px;
+    position: absolute;
+}
+
+.stat-diff {
+    color: var(--secondary-color);
+    bottom: 0;
+    position: absolute;
+}
+
+.active .stat-diff {
+    color: #abf7c8;
+}
+
+.stat:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.stat:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.margin-gap {
+    margin-top: 20px;
+}
+
+.data-table-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-table-header h3 {
+    margin: 0;
+}
+
+.payment, .client, .bug {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--dark-comp-color);
+}
+
+.payment li:not(.payment-status) {
+    overflow: hidden;
+    margin-left: 3px;
+}
+
+.data-col-names { /*under payment class so it renders after so the element can use the same properties*/
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    border-radius: 0;
+    background-color: var(--dark-bg-color);
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+    margin-left: 3px;
+    padding-bottom: 0;
+}
+
+.payment-id {
+    width: 8%;
+}
+.payment-date, .payment-deadline {
+    width: 12%;
+}
+.payment-client {
+    width: 21%;
+}
+.payment-amount {
+    width: 9%;
+}
+.payment-desc {
+    width: 26%;
+}
+
+.payment-status, .client-status, .bug-status {
+    width: 10%;
+    border: solid 1px;
+    margin-left: auto;
+    line-height: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+    text-align: center;
+}
+
+.paid {
+    background-color: #284b30;
+    color: #5cac6f;
+}
+
+.pending {
+    background-color: #707542;
+    color: #c6cf74;
+}
+
+.data-col-names .payment-status, .data-col-names .client-status, .data-col-names .bug-status {
+    justify-content: left;
+    border: none;
+    color: white;
+}

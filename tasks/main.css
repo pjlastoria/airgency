@@ -1,0 +1,142 @@
+.modal-bg {
+    display: none;/* the code for managing modals in tasks and projects is different than the file tabs */
+}
+
+.view-task {
+    max-width: 400px;
+}
+
+#task-description {
+    margin: 0 0 20px;
+    border: solid 1px rgb(255, 255, 255, 0.4);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#subtask-field {
+    margin: 0;
+}
+
+.task-legend {
+    color: white;
+    padding-left: 5px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.subtask-view {
+    background-color: var(--dark-comp-color);
+    padding: 10px 0 10px 40px;
+    cursor: pointer;
+    margin: 0 0 10px 0;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-subtasks-msg {
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    cursor:auto;
+}
+
+.subtask-view input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    height: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    background-color: #eee;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+.subtask-view input:checked ~ .checkmark {
+    background-color: var(--prime-color);
+}
+
+.subtask-view input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.subtask-view .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.actions {
+    float: right;
+    margin-top: 20px;
+}
+
+.actions button {
+    border-radius: 10px;
+}
+
+#edit-task-btn {
+    background-color: #d9e08d;
+    border: solid 1px #d9e08d;
+}
+
+#delete-task-btn {
+    background-color: #be7575;
+    border: solid 1px #be7575;
+}
+
+/*ADD PAGE*/
+
+.subtask {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subtask input {
+    align-self: center;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.subtask img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#add-subtask-btn:focus {
+    color: var(--dark-bg-color);
+    background-color: var(--prime-color);
+    border-radius: 10px;
+}
+
+#add-subtask-btn:hover {
+    background-color: var(--dark-bg-color);
+    color: white;
+}

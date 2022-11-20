@@ -1,0 +1,137 @@
+.dollar-sign {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -50px;
+    color: white;
+}
+
+.add-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form input, select, textarea {
+    background-color: var(--dark-bg-color);
+    border: solid 1px var(--prime-color);
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+}
+
+.select-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type='file'] {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+::-webkit-file-upload-button {/* unfortunately there's not a very sensible way to style the file upload button so must use webkit */
+    background: var(--prime-color);
+    color: var(--dark-bg-color);
+    line-height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input:focus {
+    background-color: black;
+}
+
+legend, label :not(.select-flex label) {
+    margin-bottom: 5px;
+}
+
+fieldset label {
+    margin-right: 10px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 -2px;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--dark-bg-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+    background-color: var(--prime-color);
+}
+
+.btn, input[type='submit'] {
+    color: var(--dark-bg-color);
+    background-color: var(--prime-color);
+    border-radius: 10px;
+    margin:0;
+}
+
+.btn:hover, input[type='submit']:hover {
+    background-color: var(--dark-bg-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+form .divider {
+    padding: 0;
+    margin: 10px 0;
+}
+
+/*** MAIN FORM FOR ADDING PROJECTS AND BOARDS ***/
+
+.main-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.input-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.input-flex div {
+    width: 50%;
+}
+
+.input-flex div label {
+    line-height: 25px;
+}
+
+.input-flex div input {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+}
+
+.amount-paid {
+    margin-top: 33px;
+    margin-left: -85px;
+}
+.amount-total {
+    margin-top: 33px;
+    margin-left: -89px;
+}

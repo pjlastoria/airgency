@@ -1,0 +1,44 @@
+.line-graph {
+  width: 100%;
+  height: 300px;
+}
+
+text {
+  fill: var(--dark-text-color);
+}
+
+#y-axis line {
+  stroke: var(--dark-text-color);
+  stroke-opacity: 0.4;
+}
+
+#graph-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#graph-header h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#graph-header button {
+  margin-left: auto;
+}
+
+.data-line, #points circle {
+  stroke: var(--prime-color);
+  fill: var(--prime-color);
+}
+
+.graph-heading {
+  font: bold 24px Verdana;
+}
+
+#y-class text {
+  text-anchor: end;
+}
+
+#x-axis text {
+  text-anchor: middle;
+}
